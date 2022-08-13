@@ -1,0 +1,29 @@
+{
+	"name": "api-twitter-clone",
+	"version": "1.0.0",
+	"description": "Backend do clone do twitter",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js",
+		"dev": "nodemon index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/raulmn00/api-twitter-clone.git"
+	},
+	"author": "Raul Mariaci Neto",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/raulmn00/api-twitter-clone/issues"
+	},
+	"homepage": "https://github.com/raulmn00/api-twitter-clone#readme",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^16.0.1",
+		"express": "^4.18.1",
+		"mongoose": "^6.5.2"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.19"
+	}
+}
