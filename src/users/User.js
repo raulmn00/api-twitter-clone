@@ -19,7 +19,7 @@ const UserSchema = new moongose.Schema({
 	userPassword: {
 		type: String,
 		required: true,
-		//select: false,
+		select: false,
 	},
 	userAvatar: {
 		type: String,
