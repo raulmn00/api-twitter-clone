@@ -23,7 +23,8 @@ const createUserController = async (req, res) => {
 	res.status(201).send(userCreated);
 };
 const findAllUserController = async (req, res) => {
-	res.send('find all ok');
+	const allUsers = await userService.findAllUsersServices();
+	res.send(allUsers);
 };
 
 module.exports = {
