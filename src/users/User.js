@@ -1,4 +1,5 @@
 const moongose = require('mongoose');
+const bcrypt = require('bcryptjs');
 
 const UserSchema = new moongose.Schema({
 	name: {
@@ -25,6 +26,11 @@ const UserSchema = new moongose.Schema({
 		type: String,
 		required: true,
 	},
+});
+
+UserSchema.pre('save', async function (next) {
+	this.userPassword = await bcrypt.hash(this.userPassword, 10);
+	next();
 });
 
 const User = moongose.model('User', UserSchema);
