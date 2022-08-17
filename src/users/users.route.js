@@ -3,5 +3,6 @@ const userController = require('./users.controller');
 
 router.post('/', userController.createUserController);
 router.get('/', userController.findAllUserController);
+router.get('/:userName', userController.findUserByNameController);
 
 module.exports = router;
