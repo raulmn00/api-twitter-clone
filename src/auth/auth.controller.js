@@ -14,7 +14,10 @@ const loginController = async (req, res) => {
 	if (!isPasswordValid) {
 		return res.status(400).send({ message: 'Senha inválida.' });
 	}
-	res.send(user);
+
+	const token = authService.generateTokenAuthService(user.id);
+
+	res.send(token);
 };
 
 module.exports = {
