@@ -11,7 +11,10 @@ const generateTokenAuthService = (userId) => {
 	return jwt.sign({ id: userId }, process.env.SECRET, { expiresIn: '24h' });
 };
 
+const findByIdUserService = async (userId) => User.findById(userId);
+
 module.exports = {
 	authLoginService,
 	generateTokenAuthService,
+	findByIdUserService,
 };
