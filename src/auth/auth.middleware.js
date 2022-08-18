@@ -11,17 +11,17 @@ module.exports = (req, res, next) => {
 	const partsToken = authHeader.split(' ');
 
 	if (partsToken.length !== 2) {
-		return res.status(401).send({ message: 'Token inválido.' });
+		return res.status(401).send({ message: 'Token invalido.' });
 	}
 	const [scheme, token] = partsToken;
 
-	if (!/^Bearer^/i.test(scheme)) {
+	if (!/^Bearer$/i.test(scheme)) {
 		return res.status(401).send({ message: 'Token mal formatado.' });
 	}
 	jwt.verify(token, process.env.SECRET, async (err, decoded) => {
 		const user = await findByIdUserService(decoded.id);
 		if (err || !user || !user.id) {
-			return res.status(401).send({ message: 'Token inválido.' });
+			return res.status(401).send({ message: 'Token invalido.' });
 		}
 		req.userId = user.id;
 		return next();

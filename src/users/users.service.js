@@ -14,9 +14,12 @@ const findUserByNameService = (userName) => {
 	return User.findOne({ userName: userName });
 };
 
+const findByIdUserService = (idUser) => User.findById(idUser);
+
 module.exports = {
 	findByEmailUserService,
 	createNewUserService,
 	findAllUsersServices,
 	findUserByNameService,
+	findByIdUserService,
 };

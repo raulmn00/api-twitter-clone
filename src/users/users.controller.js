@@ -26,9 +26,11 @@ const createUserController = async (req, res) => {
 
 	res.status(201).send({
 		user: {
-			id: userCreated.id,
-			name: userName,
-			email: userEmail,
+			id: user.id,
+			name,
+			userName,
+			email,
+			avatar,
 		},
 		token,
 	});
