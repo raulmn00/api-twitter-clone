@@ -1,25 +1,16 @@
-const User = require('./User');
+const User = require("./User");
 
-const findByEmailUserService = (userEmail) =>
-	User.findOne({ userEmail: userEmail });
+const findByEmailUserService = (email) => User.findOne({ email: email });
 
-const findAllUsersServices = () => {
-	return User.find();
-};
+const createUserSevice = (body) => User.create(body);
 
-const createNewUserService = (body) => {
-	return User.create(body);
-};
-const findUserByNameService = (userName) => {
-	return User.findOne({ userName: userName });
-};
+const findAllUserService = () => User.find();
 
 const findByIdUserService = (idUser) => User.findById(idUser);
 
 module.exports = {
-	findByEmailUserService,
-	createNewUserService,
-	findAllUsersServices,
-	findUserByNameService,
-	findByIdUserService,
+  findByEmailUserService,
+  createUserSevice,
+  findAllUserService,
+  findByIdUserService,
 };

@@ -1,31 +1,31 @@
 {
-	"name": "api-twitter-clone",
-	"version": "1.0.0",
-	"description": "Backend do clone do twitter",
-	"main": "index.js",
-	"scripts": {
-		"start": "node src/index.js",
-		"dev": "nodemon src/index.js"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/raulmn00/api-twitter-clone.git"
-	},
-	"author": "Raul Mariaci Neto",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/raulmn00/api-twitter-clone/issues"
-	},
-	"homepage": "https://github.com/raulmn00/api-twitter-clone#readme",
-	"dependencies": {
-		"bcryptjs": "^2.4.3",
-		"cors": "^2.8.5",
-		"dotenv": "^16.0.1",
-		"express": "^4.18.1",
-		"jsonwebtoken": "^8.5.1",
-		"mongoose": "^6.5.2"
-	},
-	"devDependencies": {
-		"nodemon": "^2.0.19"
-	}
+  "name": "api-twitterclone",
+  "version": "1.0.0",
+  "description": "API para clone do twitter",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index",
+    "start": "node src/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blue-edtech/api-twitterclone.git"
+  },
+  "keywords": [],
+  "author": "Thiago Lima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blue-edtech/api-twitterclone/issues"
+  },
+  "homepage": "https://github.com/blue-edtech/api-twitterclone#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.9",
+    "nodemon": "^2.0.15",
+    "swagger-ui-express": "^4.3.0"
+  }
 }
